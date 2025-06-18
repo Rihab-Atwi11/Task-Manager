@@ -1,0 +1,15 @@
+<div class="form-card">
+  <h2>Add New Task</h2>
+
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <label for="title">Task Title:</label>
+    <input id="title" type="text" formControlName="title" required />
+
+    <label>
+      <input type="checkbox" formControlName="completed" />
+      Completed
+    </label>
+
+    <button type="submit" [disabled]="form.invalid">Add Task</button>
+  </form>
+</div>
